@@ -55,18 +55,21 @@
 
   <section class="hero">
     <div class="hero-body">
-      <div class="container is-max-desktop">
+      <div class="container">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Closed-Loop Open-Vocabulary Mobile Manipulation with GPT-4V</h1>
+            <div class="container is-max-desktop">
+              <h1 class="title is-1 publication-title">Closed-Loop Open-Vocabulary Mobile Manipulation with GPT-4V</h1>
+            </div>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
+              <h1><br></h1>
               <span class="author-block">
                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Peiyuan Zhi</a><sup>1,*</sup>,</span>
                 <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Zhiyuan Zhang</a><sup>1,2,*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Muzhi Han</a><sup>1,3</sup>,
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Muzhi Han</a><sup>3</sup>,
                   </span>
                   <span class="author-block">
                     <a href="4 AUTHOR PERSONAL LINK" target="_blank">Zeyu Zhang</a><sup>1</sup>,
@@ -86,10 +89,10 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>National Key Laboratory of General Artificial Intelligence, Beijing Institute for General Artificial Intelligence (BIGAI),</span>
+                    <span class="author-block"><sup>1</sup>State Key Laboratory of General Artificial Intelligence, Beijing Institute for General Artificial Intelligence (BIGAI),</span>
                     <span class="author-block"><sup>2</sup>Department of Automation, Tsinghua University,</span>
                     <span class="author-block"><sup>3</sup>University of California, Los Angeles</span>
-                    <span class="author-block"><br>Under Review</span>
+                    <!-- <span class="conference-or-state"><br>Under Review</span> -->
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -153,12 +156,12 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/videos/iros-demo-Compressed.mp4"
         type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+      <!-- <h2 class="subtitle has-text-centered">
+        video demo
+      </h2> -->
     </div>
   </div>
 </section>
@@ -181,6 +184,81 @@
 </section>
 <!-- End paper abstract -->
 
+
+<!-- Approach -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Approach</h2>
+      <div class="item item-video1">
+        <video poster="" id="video1" autoplay muted loop height="100%" >
+          <!-- Your video file here -->
+          <source src="static/videos/figure1.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <h2>
+        <br>
+        <strong>A brief overview of COME-robot's workfow.</strong> Given a task instruction, COME-robot employs GPT-4V for reasoning and generates a code-based plan. Through feedback obtained from the robot's execution and interaction with the environment, it iteratively updates the subsequent plan or recovers from failures, ultimately accomplishing the given task.
+        <br>
+        <br>
+        <br>
+        <br>
+      </h2>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/figure2.png" alt="MY ALT TEXT"/>
+        <h2>
+          <br>
+          <strong>The unique properties of COME-robot:</strong> Active Perception, Situated Commonsense Reasoning, and Recover from Failure. Actions to be executed as reasoned by GPT-4V are highlighted in blue, identifed failures are highlighted in red, and outcomes verifed after observation or recovery are highlighted in green.
+          <br>
+          <br>
+          <br>
+          <br>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End Approach -->
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Results</h2>
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+        <!-- <h2 class="title is-4">Mobile Manipulation</h2> -->
+        <div class="item item-video1">
+          <h2 class="subtitle has-text-centered"><strong>mobile manipulation<br><br></strong></h2>
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/mobile_demo_Compressed.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <h2 class="subtitle has-text-centered">
+            <br>
+            <br>
+            <strong>tabletop manipulation</strong>
+            <br>
+            <br>
+          </h2>
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/table_demo_Compressed.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
 
 <!-- Image carousel -->
 <section class="hero is-small">
