@@ -69,6 +69,9 @@
                 <span class="author-block">
                   <a href="https://come-robot.github.io/" target="_blank">Zhiyuan Zhang</a><sup>1,2,*</sup>,</span>
                   <span class="author-block">
+                    <a href="https://come-robot.github.io/" target="_blank">Yu Zhao</a><sup>1</sup>,
+                  </span>
+                  <span class="author-block">
                     <a href="https://sites.google.com/view/muzhihan" target="_blank">Muzhi Han</a><sup>3</sup>,
                   </span>
                   <span class="author-block">
@@ -81,7 +84,7 @@
                     <a href="https://sites.google.com/g.ucla.edu/zyjiao/home" target="_blank">Ziyuan jiao</a><sup>1</sup>,
                   </span>
                   <span class="author-block">
-                    <a href="https://buzz-beater.github.io/" target="_blank">Baoxiong Jia</a><sup>1</sup>,
+                    <a href="https://buzz-beater.github.io/" target="_blank">Baoxiong Jia</a><sup>1,&dagger;</sup>,
                   </span>
                   <span class="author-block">
                     <a href="https://siyuanhuang.com/" target="_blank">Siyuan Huang</a><sup>1,&dagger;</sup>,
@@ -92,8 +95,8 @@
                     <span class="author-block"><sup>1</sup>State Key Laboratory of General Artificial Intelligence, Beijing Institute for General Artificial Intelligence (BIGAI),</span>
                     <span class="author-block"><sup>2</sup>Department of Automation, Tsinghua University,</span>
                     <span class="author-block"><sup>3</sup>University of California, Los Angeles</span>
-                    <!-- <span class="conference-or-state"><br>Under Review</span> -->
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="conference-or-state"><br>ICRA 2025</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -156,7 +159,7 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/iros-demo-Compressed.mp4"
+        <source src="static\videos\icra_demov2.mp4"
         type="video/mp4">
       </video>
       <!-- <h2 class="subtitle has-text-centered">
@@ -175,7 +178,9 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Autonomous robot navigation and manipulation in open environments require reasoning and replanning with closed-loop feedback. We present COME-robot, the first closed-loop framework utilizing the GPT-4V vision-language foundation model for open-ended reasoning and adaptive planning in real-world scenarios. We meticulously construct a library of action primitives for robot exploration, navigation, and manipulation, serving as callable execution modules for GPT-4V in task planning. On top of these modules, GPT-4V serves as the brain that can accomplish multimodal reasoning, generate action policy with code, verify the task progress, and provide feedback for replanning. Such design enables COME-robot to (i) actively perceive the environments, (ii) perform situated reasoning, and (iii) recover from failures. Through comprehensive experiments involving 8 challenging real-world tabletop and manipulation tasks, COME-robot demonstrates a significant improvement in task success rate (~25%) compared to state-of-the-art baseline methods. We further conduct comprehensive analyses to elucidate how COME-robot's design facilitates failure recovery, free-form instruction following, and long-horizon task planning.          </p>
+            Autonomous robot navigation and manipulation in open environments require reasoning and replanning with closed-loop feedback. In this work, we present COME-robot, the first closed-loop robotic system utilizing the GPT-4V vision-language foundation model for open-ended reasoning and adaptive planning in real-world scenarios. robot incorporates two key innovative modules: (i) a multi-level open-vocabulary perception and situated reasoning module that enables effective exploration of the 3D environment and target object identification using commonsense knowledge and situated information, and (ii) an iterative closed-loop feedback and restoration mechanism that verifies task feasibility, monitors execution success, and traces failure causes across different modules for robust failure recovery. Through comprehensive experiments involving 8 challenging real-world mobile and tabletop manipulation tasks, COME-robot demonstrates a significant improvement in task success rate (~35%) compared to state-of-the-art methods. We further conduct comprehensive analyses to elucidate how COME-robot's design facilitates failure recovery, free-form instruction following, and long-horizon task planning.
+            <!-- Autonomous robot navigation and manipulation in open environments require reasoning and replanning with closed-loop feedback. We present COME-robot, the first closed-loop framework utilizing the GPT-4V vision-language foundation model for open-ended reasoning and adaptive planning in real-world scenarios. We meticulously construct a library of action primitives for robot exploration, navigation, and manipulation, serving as callable execution modules for GPT-4V in task planning. On top of these modules, GPT-4V serves as the brain that can accomplish multimodal reasoning, generate action policy with code, verify the task progress, and provide feedback for replanning. Such design enables COME-robot to (i) actively perceive the environments, (ii) perform situated reasoning, and (iii) recover from failures. Through comprehensive experiments involving 8 challenging real-world tabletop and manipulation tasks, COME-robot demonstrates a significant improvement in task success rate (~25%) compared to state-of-the-art baseline methods. We further conduct comprehensive analyses to elucidate how COME-robot's design facilitates failure recovery, free-form instruction following, and long-horizon task planning. -->
+          </p>
         </div>
       </div>
     </div>
@@ -207,7 +212,7 @@
       </h2>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/figure2.png" alt="MY ALT TEXT"/>
+        <img src="static/images/method_v6.png" alt="MY ALT TEXT"/>
         <h2>
           <br>
           <strong>The unique properties of COME-robot:</strong> Active Perception, Situated Commonsense Reasoning, and Recover from Failure. Actions to be executed as reasoned by GPT-4V are highlighted in blue, identifed failures are highlighted in red, and outcomes verifed after observation or recovery are highlighted in green.
@@ -285,6 +290,39 @@
 </div>
 </div>
 </section>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="subtitle has-text-centered">
+        <strong>System Prompts</strong>
+        <br>
+      </h2>
+      <div class="image-container">
+        <!-- Your image here -->
+        <img src="static/images/prompt.png" alt="MY ALT TEXT" class="centered-image"/>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  /* 让图片居中 */
+  .image-container {
+      display: flex;
+      justify-content: center; /* 水平居中 */
+      align-items: center; /* 垂直居中（如果有高度限制） */
+      width: 100%;
+  }
+  
+  /* 让图片缩小一些 */
+  .centered-image {
+      max-width: 50%; /* 让图片最大宽度是容器的 50% */
+      height: auto; /* 保持图片比例 */
+      display: block;
+  }
+  </style>
+
 <!-- End image carousel -->
 
 <!--BibTex citation -->
